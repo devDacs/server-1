@@ -5,6 +5,7 @@ import helmet from "helmet";
 import morgan from "morgan";
 
 /* ROUTE IMPORTS */
+import projectRoutes from "./routes/projectRoutes.js";
 
 /* CONFIGURATION */
 const app = express();
@@ -29,6 +30,8 @@ app.use(cors());
 app.get("/", (req, res) => {
   res.send("This is home route");
 });
+
+app.use("/projects", projectRoutes)
 
 /* START SERVER */
 app.listen(port, "0.0.0.0", () => {
