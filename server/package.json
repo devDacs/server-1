@@ -8,7 +8,8 @@
     "clean": "rimraf dist",
     "build": "npm run clean && tsc",
     "start": "npm run build && node dist/src/index.js",
-    "dev": "npm run build && concurrently \"tsc -w\" \"tsx watch src/index.ts\""
+    "dev": "npm run build && concurrently \"tsc -w\" \"tsx watch src/index.ts\"",
+    "seed": "tsx prisma/seed.ts"
   },
   "keywords": [],
   "type": "module",
